@@ -1,0 +1,226 @@
+body {
+    font-family: Georgia, sans-serif;
+    background-color: cornflowerblue;
+    background-image: url('https://img.freepik.com/free-vector/amusement-park-carnival-festive-fair-cartoon_107791-1896.jpg?w=1380&t=st=1673454396~exp=1673454996~hmac=40370fc47193c082638591e1129b59a1beb8b86df01014dda93c7a0eefaf50ea');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a:link, a:visited {
+    background-color: rgb(198, 0, 44);
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: black;
+    display: inline-block;
+    box-shadow: 0 0 3px rgb(0 0 0);
+    transition: all 200ms ease-out;
+}
+
+a:hover, a:active {
+    background-color: rgb(198, 0, 44);
+    color: white;
+    box-shadow: 0 0 6px 2px goldenrod;
+}
+
+#gornyPasek {
+    background-color:rgb(198, 0, 44);
+    border-bottom: 2px solid black;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h2 {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+    margin-left: 10%;
+    max-width: 100%;
+}
+
+.kontener {
+
+    /*min-height: 100px;*/
+    /*min-width: 100px;*/
+    /*height: 20%;*/
+    /*width: 60%;*/
+    top: 10%;
+    left: 15%;
+    width: 70%; /* Ustaw odpowiedni rozmiar obrazu */
+    height: auto;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: rgba(255,255,255,0.8);
+    position: sticky;
+
+}
+
+.produkty {
+    display: flex;
+    justify-content: space-between;
+    z-index: unset;
+}
+
+.produkt {
+    border: solid 2px green;
+    border-radius: 5px;
+    padding: 1em;
+    width: 20%;
+}
+
+.koszykKontener {
+    border:2px solid green;
+    border-radius:5px;
+    padding: 1em;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(198, 0, 44);
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: black;
+    display: inline-block;
+    box-shadow: 0 0 3px rgb(0 0 0);
+    transition: all 200ms ease-out;
+  }
+
+  button:hover {
+    background-color: rgb(198, 0, 44);
+    color: white;
+    box-shadow: 0 0 6px 2px goldenrod;
+    cursor: pointer;
+  }
+
+table {
+    margin-bottom:1em;
+    border-collapse:collapse;
+
+  }
+#koszykWypis{
+    height: 100px; /* Ustaw odpowiednią wysokość */
+    width: 100%; /* Ustaw odpowiednią szerokość */
+    overflow-y: scroll;
+}
+table td, table th {
+    text-align:left;
+    padding:0.25em 1em;
+    border-bottom:1px solid green;
+  }
+
+#koszykPodsumowanie {
+    margin-right:0;
+    margin-left: auto;
+  }
+
+  hr {
+    border-top: 1px solid green;
+  }
+
+.koszykPrzyciski {
+    margin-right:0;
+    margin-left:auto;
+    display:flex;
+    justify-content:flex-end;
+}
+
+#oproznijKoszyk {
+    margin-right: 10px;
+}
+
+#infoLogowanie {
+  font-size: larger;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#infoLogowanie a {
+  margin-top: 10px;
+}
+
+/* The Modal (background) */
+ .modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+
+ /* Modal Content/Box */
+ .modal-content {
+   top: 20%;
+   background-color: #fefefe;
+   margin: 15% auto; /* 15% from the top and centered */
+   padding: 20px;
+   border: 1px solid #888;
+   width: 50%; /* Could be more or less, depending on screen size */
+ }
+
+ /* The Close Button */
+ .close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+
+ .close:hover,
+ .close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+ /* Modal Header */
+ .modal-header {
+   padding: 2px 16px;
+   background-color: rgb(198, 0, 44);
+ }
+
+ /* Modal Body */
+ .modal-body {padding: 2px 16px;}
+
+ /* Modal Footer */
+ .modal-footer {
+   padding: 2px 16px;
+   background-color: #5cb85c;
+   color: white;
+ }
+
+ /* Modal Content */
+ .modal-content {
+   position: relative;
+   background-color: #fefefe;
+   margin: auto;
+   padding: 0;
+   border: 1px solid #888;
+   width: 20%;
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+   animation-name: animatetop;
+   animation-duration: 0.4s
+ }
+
+ /* Add Animation */
+ @keyframes animatetop {
+   from {top: -300px; opacity: 0}
+   to {top: 0; opacity: 1}
+ }
+
+ .modal-body {
+ padding: 2px 16px;
+ margin: auto;
+ }

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.thymeleaf.org/ ">
+
+<head>
+
+    <meta charset="UTF-8"/>
+    <title>Strona Główna</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" href="/css/index.css">
+
+</head>
+<body>
+
+<h1 id="gornyPasek" style="text-align: center">Park Rozrywki</h1>
+<h2>
+    <a href="/index" >Strona Główna</a>
+    <a href="/koszykbl">Bilety</a>
+
+    <a href="/atrakcje" >Atrakcje</a>
+    <a href="/login" >Zaloguj się</a>
+
+</h2>
+<!--Using images in page    -->
+<!-- <img th:src="@{/assets/img/img.png}" alt="Image" class="img-fluid"> -->
+
+
+<div class="container" id="glownyKontener" >
+    <div id="infoLogowanie">
+
+        <label style="font-size:30px">Serdecznie witamy na stronie naszego Parku Rozrywki!</label>
+        <div id="info2" style="font-size:20px">Aby zakupić karnet,</div>
+        <a id="infoBt" th:href="@{/main}">Zaloguj się.</a>
+
+    </div>
+    <div class="container" id="kontenerZDJ">
+        <img src="" alt="" id="zdjPokaz">
+    </div>
+    <div id="linkPrzed">
+        <table>
+            <tbody>
+            <tr th:each="atrakcje: ${listaAtrakcji1}">
+                <td>
+                    <img class="linkPrzed" th:src="${atrakcje.link}" id="image" alt="">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+
+    let data = /*[[${listaAtrakcji}]]*/ `default`;
+    console.log(data);
+    /*]]>*/
+</script>
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/index.js}"></script>
+
+
+
+</html>

@@ -1,0 +1,155 @@
+body {
+    font-family: Georgia, sans-serif;
+    background-color: cornflowerblue;
+    background-image: url('https://img.freepik.com/free-vector/amusement-park-carnival-festive-fair-cartoon_107791-1896.jpg?w=1380&t=st=1673454396~exp=1673454996~hmac=40370fc47193c082638591e1129b59a1beb8b86df01014dda93c7a0eefaf50ea');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+a:link, a:visited {
+    background-color: rgb(198, 0, 44);
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: black;
+    display: inline-block;
+    box-shadow: 0 0 3px rgb(0 0 0);
+    transition: all 200ms ease-out;
+}
+a:hover, a:active {
+    background-color: rgb(198, 0, 44);
+    color: white;
+    box-shadow: 0 0 6px 2px goldenrod;
+}
+#gornyPasek {
+    background-color:rgb(198, 0, 44);
+    border-bottom: 2px solid black;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+h2 {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+    margin-left: 10%;
+    max-width: 100%;
+}
+
+.kontener {
+    min-height: 70%;
+    min-width: 70%;
+    height: auto;
+    width: auto;
+    max-height: 70%;
+    max-width: 70%;
+    background-color:  rgba(255,255,255,0.8);
+    margin: 1em;
+    padding: 30px;
+    border-radius: 10px;
+    top: 10%;
+    left: 15%;
+    position: sticky;
+    opacity: 100%;
+    text-align: center;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr, th {
+    height: 8%;
+}
+
+#tabela th {
+    cursor: pointer;
+}
+
+#tabela th:hover {
+    background-color: rgb(190, 169, 169);
+    transition: all 200ms ease-out;
+}
+
+
+th, td {
+    height: 5%;
+    width: 10%;
+}
+
+#tabela {
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y:scroll;
+    height:100px;
+    border-radius: 10px;
+}
+
+.kontener_tekst {
+    border: solid 2px green;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 10px;
+}
+
+.pracownicy {
+    border: solid 2px green;
+    border-radius: 5px;
+    padding: 1em;
+
+}
+
+.active .zmiana {
+    background-color: rgba(40,180,20,0.6);
+
+    font-weight: bold;
+
+}
+
+.pracownicy a {
+    height: 3%;
+}
+
+button{
+    background-color: rgb(198, 0, 44);
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: black;
+    display: inline-block;
+    box-shadow: 0 0 3px rgb(0 0 0);
+    transition: all 200ms ease-out;
+}
+button:hover, button:active {
+    background-color: rgb(198, 0, 44);
+    color: white;
+    box-shadow: 0 0 6px 2px goldenrod;
+}
+#przyciskWyloguj1 {
+    align-self: center;
+    background-color: rgb(198, 0, 44);
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: black;
+    display: inline-block;
+    box-shadow: 0 0 3px rgb(0 0 0);
+    transition: all 200ms ease-out;
+}
+#przyciskWyloguj1:hover, #przyciskWyloguj1:active {
+    background-color: rgb(198, 0, 44);
+    color: white;
+    box-shadow: 0 0 6px 2px goldenrod;
+}
+

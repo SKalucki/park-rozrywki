@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.thymeleaf.org/ ">
+
+<head>
+
+    <meta charset="UTF-8"/>
+    <title>Error</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" href="/css/error.css">
+
+</head>
+<body>
+
+<h1 id="gornyPasek" style="text-align: center">Park Rozrywki</h1>
+<h2>
+    <a href="/index" >Strona Główna</a>
+    <a href="/koszyk">Bilety</a>
+
+    <a href="/atrakcje" >Atrakcje</a>
+    <a href="/login" >Zaloguj się</a>
+
+</h2>
+
+<div class="kontener">
+
+    <div>
+        <form method="post" th:action="@{/index}">
+
+            <p id="error">Error</p>
+            <p id="tresc">500 - wewnętrzny błąd serwera</p>
+
+            <button class="custom button" type="submit" value="Sign In">Wróć do Strony Głównej</button>
+        </form>
+    </div>
+
+</div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

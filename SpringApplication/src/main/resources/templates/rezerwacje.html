@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.thymeleaf.org/ ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezerwacje</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" href="/css/pracownicy.css">
+
+</head>
+<body>
+<main>
+
+    <h1 id="gornyPasek" style="text-align: center">Park Rozrywki</h1>
+    <h2>
+        <a href="/main_admin" >Panel Admina</a>
+        <a href="/main_admin/pracownicy">Pracownicy</a>
+        <a href="/main_admin/rezerwacje">Rezerwacje</a>
+
+        <form action="#" th:action="@{/index}" method="post">
+            <button class="custom-button" id="przyciskWyloguj1" type="submit" onclick="successfullyLogout()" value="Sign Out">Wyloguj</button>
+        </form>
+
+
+
+
+    </h2>
+
+
+    <div class="kontener">
+        <div class="kontener_tekst">
+            <h1>Rezerwacje</h1>
+            <br>
+            <p>Tabela zawiera wszystkie rezerwacje złożone przez użytkowników.</p>
+            <p>Po kliknięciu na nagłówek danej kolumny, tabela się sortuje.</p>
+            <a href="/main_admin/rezerwacje/new">Dodaj nową Rezerwację</a>
+
+        </div>
+        <div class="rezerwacje">
+            <table id="tabela">
+                <thead>
+                <tr id="wiersz">
+                    <th><b>ID rezerwacji</b></th>
+                    <th><b>Imię</b></th>
+                    <th><b>Nazwisko</b></th>
+                    <th><b>iloscBiletów</b></th>
+                    <th><b>Kwota [zł]</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each = "rezerwacje : ${listaRezerwacje}">
+                    <td th:text = "${rezerwacje.id}"></td>
+                    <td th:text = "${rezerwacje.imie}"></td>
+                    <td th:text = "${rezerwacje.nazwisko}"></td>
+                    <td th:text = "${rezerwacje.iloscBiletow}"></td>
+                    <td th:text = "${rezerwacje.kwota}"></td>
+
+                    <td>
+                        <a th:href="@{'/main_admin/rezerwacje/delete/' + ${rezerwacje.id}}">Usuń</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/pracownicy.js"></script>
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/main_user.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" th:href="@{/css/atrakcje.css}"/>
+    <meta charset="UTF-8"/>
+    <title>Atrakcje</title>
+</head>
+<body>
+
+<h1 id="gornyPasek" style="text-align: center">Park Rozrywki</h1>
+<h2>
+    <a href="/index" >Strona Główna</a>
+    <a href="/atrakcje" >Atrakcje</a>
+    <a href="/koszykbl" >Bilety</a>
+    <a href="/login" >Zaloguj się</a>
+</h2>
+<div id="left-bar"></div>
+<div id="right-bar"></div>
+
+
+<div id=content align="center">
+    <h1 id="goraTabeli">Atrakcje</h1>
+
+    <div id="tabela-wrapper">
+
+        <div class="punkt" id="pkt_wejscie">WEJŚCIE</div>
+        <div class="point point1" data-index="1"></div>
+        <div class="point point2" data-index="2"></div>
+        <div class="point point3" data-index="3"></div>
+        <div class="point point4" data-index="4"></div>
+        <div class="point point5" data-index="5"></div>
+        <div class="point point6" data-index="6"></div>
+
+        <table class=float-left id="tabelaNazw">
+            <tbody>
+            <tr th:each="atrakcje: ${listaAtrakcji}">
+                <!--                <td th:text="${atrakcje.id}"></td>-->
+                <td th:text="${atrakcje.nazwa}" id="wierszAtrakcji"></td>
+                <!--                <td>-->
+                <!--                                        <img th:src="${atrakcje.link}">-->
+                <!--                </td>-->
+                <!--                                <td th:text = "${atrakcje.opis}">Opis</td>-->
+            </tr>
+            </tbody>
+        </table>
+
+        <img  class=float-left src="https://cdn.myportfolio.com/f236db8b7bc8b27683d5bf13306976a5/3b4269b40541290896365e4c_rw_1200.jpg?h=9a120749dbd8ce05abb103a6e97dbc56"  alt="">
+
+        <img id="zdjPo" src="" alt="">
+        <div id="opisPo" text=""></div>
+
+        <div class=float-right id="linkIOpisPrzed">
+            <table>
+                <tbody>
+                <tr th:each="atrakcje: ${listaAtrakcji}">
+                    <th >
+                        <img class="linkPrzed" th:src="${atrakcje.link}"  alt="">
+                        <div class="opisPrzed" id="text" th:text = "${atrakcje.opis}" ></div>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+    </div>
+
+    <!--  <a href="/atrakcje/new">Dodaj nową atrakcję</a>-->
+
+
+</div>
+
+</body>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+
+    let data = /*[[${listaAtrakcji}]]*/ `default`;
+    console.log(data);
+    /*]]>*/
+</script>
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/atrakcje.js}"></script>
+
+
+
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.thymeleaf.org/ ">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nowy Pracownik</title>
+
+  <link rel="stylesheet" href="/css/pracownicy.css">
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+
+</head>
+<body>
+<main>
+
+  <h1 id="gornyPasek" style="text-align: center">Park Rozrywki - PANEL ADMINISTRACYJNY</h1>
+  <h2>
+    <a href="/main_admin" >Panel Admina</a>
+    <a href="/main_admin/pracownicy">Pracownicy</a>
+    <a href="/main_admin/rezerwacje">Rezerwacje</a>
+    <form action="#" th:action="@{/index}" method="post">
+      <button class="custom-button" id="przyciskWyloguj1" type="submit" onclick="successfullyLogout()" value="Sign Out">Wyloguj</button>
+    </form>
+  </h2>
+
+  <div class="kontener">
+    <div class="kontener_tekst">
+      <h1>Dodaj nowego pracownika</h1>
+    </div>
+    <div class="pracownicy">
+      <form action="#" th:action="@{/saveP}" th:object="${pracownicy}" method="post">
+        <!-- TABLE -->
+        <table id="tabela">
+          <tr>
+            <td>ID Pracownika:</td>
+            <td><input type="text" th:field="*{id_pracownika}"></td>
+          </tr>
+          <tr>
+            <td>Imie:</td>
+            <td><input type="text" th:field="*{imie}"></td>
+          </tr>
+          <tr>
+            <td>Nazwisko:</td>
+            <td><input type="text" th:field="*{nazwisko}"></td>
+          </tr>
+          <tr>
+            <td>Pesel:</td>
+            <td><input type="text" th:field="*{pesel}"></td>
+          </tr>
+          <tr>
+            <td>Pensja:</td>
+            <td><input type="text" th:field="*{pensja}"></td>
+          </tr>
+          <tr>
+            <td>Czy dzisiaj pracuje?:</td>
+            <td><input type="text" th:field="*{praca_dzis}"></td>
+          </tr>
+          <tr>
+            <td>Obsługiwana Atrakcja:</td>
+            <td><input type="text" th:field="*{id_przypisanej_atrakcji}"></td>
+          </tr>
+          <!-- BUTTON SAVE -->
+          <tr>
+            <td colspan="2"><button type="submit">Zapisz</button></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>

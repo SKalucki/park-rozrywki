@@ -1,0 +1,126 @@
+body {
+    font-family: Georgia, sans-serif;
+    background-color: cornflowerblue;
+    background-image: url('https://img.freepik.com/free-vector/amusement-park-carnival-festive-fair-cartoon_107791-1896.jpg?w=1380&t=st=1673454396~exp=1673454996~hmac=40370fc47193c082638591e1129b59a1beb8b86df01014dda93c7a0eefaf50ea');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+a:link, a:visited {
+    background-color: green;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: black;
+    display: inline-block;
+    box-shadow: 0 0 3px rgb(0 0 0);
+    transition: all 200ms ease-out;
+}
+a:hover, a:active {
+    background-color: green;
+    color: white;
+    box-shadow: 0 0 6px 2px goldenrod;
+}
+#gornyPasek {
+    background-color:green;
+    border-bottom: 2px solid black;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+h2 {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+    margin-left: 10%;
+    max-width: 100%;
+}
+#glownyKontener{
+    width: auto;
+
+    text-align: center;
+    display: flex;
+
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /*box-sizing: border-box;*/
+
+
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.8);
+    z-index: -1;
+
+}
+
+
+#infoLogowanie{
+    width: 100%;
+}
+
+#przyciskWyloguj1 {
+    align-self: center;
+    background-color: green;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: black;
+    display: inline-block;
+    box-shadow: 0 0 3px rgb(0 0 0);
+    transition: all 200ms ease-out;
+}
+#przyciskWyloguj1:hover, #przyciskWyloguj1:active {
+    background-color: green;
+    color: white;
+    box-shadow: 0 0 6px 2px goldenrod;
+}
+#przyciskWyloguj2 {
+    align-self: center;
+    background-color: green;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: black;
+    display: inline-block;
+    box-shadow: 0 0 3px rgb(0 0 0);
+    transition: all 200ms ease-out;
+}
+#przyciskWyloguj2:hover, #przyciskWyloguj2:active {
+    background-color: green;
+    color: white;
+    box-shadow: 0 0 6px 2px goldenrod;
+}
+
+#kontenerZDJ {
+
+}
+
+#zdjPokaz {
+    margin-left: 60%;
+    margin-bottom: 5%;
+    opacity: 0;
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+
+}
+#linkPrzed {
+    display: none;
+}
+

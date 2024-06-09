@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.thymeleaf.org/ ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilety</title>
+
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" href="/css/koszyk.css">
+
+
+
+</head>
+<body>
+<h1 id="gornyPasek" style="text-align: center">Park Rozrywki</h1>
+<h2>
+    <a href="/index" >Strona Główna</a>
+    <a href="/koszyk">Bilety</a>
+
+    <a href="/atrakcje" >Atrakcje</a>
+    <a href="/login" >Zaloguj się</a>
+</h2>
+
+
+<!-- kontener ze sprzedawanymi biletami -->
+<div class="kontener">
+    <h1>Oferowane bilety</h1>
+    <br>
+    <div class="produkty">
+
+        <div class="produkt" id="pierwszy">
+            <h3 class="nazwaProduktu">Bilet normalny</h3>
+            <p>Dla osób powyżej 18 roku życia, niekwalifikujących się do żadnej zniżki.</p>
+            <p class="cena">Cena: 100 zł</p>
+            <button type="button" class="dodajDoKoszyka">Dodaj do koszyka</button>
+        </div>
+
+        <br>
+
+        <div class="produkt" id="drugi">
+            <h3 class="nazwaProduktu">Bilet ulgowy</h3>
+            <p>Dla osób poniżej 18 roku życia, studentów do 26 roku życia lub seniorów.</p>
+            <p class="cena">Cena: 50 zł</p>
+            <button type="button" class="dodajDoKoszyka">Dodaj do koszyka</button>
+        </div>
+
+        <br>
+
+        <div class="produkt" id="trzeci">
+            <h3 class="nazwaProduktu">Bilet rodzinny</h3>
+            <p>Dla rodzin, 2 dorosłych 2 dzieci.</p>
+            <p class="cena">Cena: 200 zł</p>
+            <br>
+            <button type="button" class="dodajDoKoszyka">Dodaj do koszyka</button>
+        </div>
+    </div>
+    <br>
+    <!-- kontener z koszykiem -->
+    <div class="koszykKontener">
+        <h2>Koszyk</h2>
+        <table id="koszykWypis">
+            <thead>
+            <tr>
+                <th><b>Produkty</b></th>
+                <th><b>Cena</b></th>
+            </tr>
+            </thead>
+            <tbody id="koszykTabela"></tbody>
+        </table>
+        <hr>
+
+        <table id="koszykPodsumowanie">
+            <tr>
+                <td><b>Ilość produktów</b></td>
+                <td><b>Cena całkowita</b></td>
+            </tr>
+            <tr id="drugiWiersz">
+                <td><span id="iloscProduktow">0</span></td>
+                <td><span id="cenaCalkowita">0</span> zł</td>
+            </tr>
+        </table>
+
+        <div class="koszykPrzyciski">
+            <button type="button" id="oproznijKoszyk">Opróżnij koszyk</button>
+            <button type="button" id="zaplac">Zarezerwuj bilet</button>
+        </div>
+        </div>
+    </div>
+<div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Rezerwacja</h1>
+                <span class="close">&times;</span>
+
+            </div>
+            <div class="modal-body">
+                <form action="#" th:action="@{/saveRUser}" th:object="${rezerwacje}" method="post">
+                    <!-- TABLE -->
+                    <table id="tabela">
+
+                        <tr>
+                            <td>Imie:</td>
+                            <td><input type="text" th:field="*{imie}"></td>
+                        </tr>
+                        <tr>
+                            <td>Nazwisko:</td>
+                            <td><input type="text" th:field="*{nazwisko}"></td>
+                        </tr>
+                        <tr>
+                            <td>Ilość biletów:</td>
+                            <td><input id="iloscBiletow"` th:field="*{iloscBiletow}" ></td>
+                        </tr>
+                        <tr>
+                            <td>Kwota:</td>
+                            <td><input id="kwotaCalosc" th:field="*{kwota}" ></td>
+                        </tr>
+
+                        <!-- BUTTON SAVE -->
+                        <tr>
+                            <td colspan="2"><button type="submit">Zapisz</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js\koszyk.js"></script>
+</body>
+</html>

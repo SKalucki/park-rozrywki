@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.thymeleaf.org/ ">
+
+<head>
+
+    <meta charset="UTF-8"/>
+    <title>Strona Główna</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" href="/css/main_user.css">
+
+</head>
+<body>
+
+<h1 id="gornyPasek" style="text-align: center">Park Rozrywki</h1>
+<h2>
+    <a href="/index" >Strona Główna</a>
+    <a href="/koszyk">Kup Bilet</a>
+    <a href="/atrakcje" >Atrakcje</a>
+    <form action="#" th:action="@{/index}" method="post">
+        <button class="custom-button" id="przyciskWyloguj2" type="submit" onclick="successfullyLogout()" value="Sign Out">Wyloguj</button>
+    </form>
+
+
+</h2>
+
+<div class="container" id="glownyKontener" >
+
+        <div id="infoLogowanie">
+
+            <h1
+                    class="nav-link" th:inline="text">Zalogowano jako <b style="text-transform:capitalize">[[${#httpServletRequest.remoteUser}]]</b>.
+            </h1>
+            <h3 class="form-group">
+                <label th:inline="text">Witamy <b style="text-transform:capitalize">[[${#httpServletRequest.remoteUser}]]</b> na stronie głównej!</label>
+            </h3>
+            <h4>Jeśli chcesz się wylogować, wciśnij "Wyloguj"
+            </h4>
+
+            <button class="custom-button" id="przyciskWyloguj1" type="submit" onclick="successfullyLogout()" value="Sign Out">Wyloguj</button>
+
+        </div>
+
+</div>
+
+</body>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+
+    let data = /*[[${listaAtrakcji}]]*/ `default`;
+    console.log(data);
+    /*]]>*/
+</script>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/main_user.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+
+
+
+</html>
+
+
+

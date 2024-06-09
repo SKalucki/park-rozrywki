@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.thymeleaf.org/ ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilety</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" href="css/koszyk.css">
+
+
+</head>
+<body>
+<main>
+
+
+    <h1 id="gornyPasek" style="text-align: center">Park Rozrywki</h1>
+    <h2>
+        <a href="/index" >Strona Główna</a>
+        <a href="/koszyk">Bilety</a>
+
+        <a href="/atrakcje" >Atrakcje</a>
+        <a href="/login" >Zaloguj się</a>
+    </h2>
+
+
+    <!-- kontener ze sprzedawanymi biletami -->
+    <div class="kontener">
+        <h1>Oferowane bilety</h1>
+        <br>
+        <div class="produkty">
+
+            <div class="produkt" id="pierwszy">
+                <h3 class="nazwaProduktu">Bilet normalny</h3>
+                <p>Dla osób powyżej 18 roku życia, niekwalifikujących się do żadnej zniżki.</p>
+                <p class="cena">Cena: 100 zł</p>
+            </div>
+
+            <br>
+
+            <div class="produkt" id="drugi">
+                <h3 class="nazwaProduktu">Bilet ulgowy</h3>
+                <p>Dla osób poniżej 18 roku życia, studentów do 26 roku życia lub seniorów.</p>
+                <p class="cena">Cena: 50 zł</p>
+            </div>
+
+            <br>
+
+            <div class="produkt" id="trzeci">
+                <h3 class="nazwaProduktu">Bilet rodzinny</h3>
+                <p>Dla rodzin, 2 dorosłych 2 dzieci.</p>
+                <p class="cena">Cena: 200 zł</p>
+                <br>
+            </div>
+        </div>
+        <div id="infoLogowanie">
+            <h3>Wygląda na to, że nie jesteś zalogowany.</h3>
+                <div id="info2" style="font-size:20px">Aby zakupić bilety,</div>
+                <a href="/login" >Zaloguj się</a>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+<script src="js\koszyk.js"></script>
+</body>
+</html>
